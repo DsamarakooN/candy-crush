@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Create candy-crush game using html,css and js"/>
+        <meta name="author" content="Dhanushka Samarakoon"/>
+        <meta name="revised" content="Dhanush , 11/12/2022"/>
+        <meta name="viewport" content="width = device-width , initial-scale = 1.0"/>
+        <title>Candy Crush</title>
+        <link rel="stylesheet" href="candy.css">
+        <script src="candy.js"></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <nav>
+                <a href="#" class="logo"><img src="images/logo.png" id="logo"></a>
+                <ul>
+                    
+                </ul>
+                <div class="toggle-btn" id="btn">
+                    
+                    <img src="images/moon.png" id="btnIcon">
+                </div>
+            </nav>
+
+            <!--Game board-->
+            <h1>candy-crush</h1>
+            <h1>Score: <span id="score">0</span></h1>
+            <div id="board"></div>
+
+        </div>
+
+        <script>
+
+            let btn = document.getElementById("btn");
+            let btnIcon = document.getElementById("btnIcon");
+            let logo = document.getElementById("logo");
+    
+            btn.onclick = function(){
+                document.body.classList.toggle("dark-theme");
+    
+                if(document.body.classList.contains("dark-theme")){
+                    btnIcon.src = "images/sun.png"
+                    logo.src = "images/logo-white.png"
+                }else{
+                    btnIcon.src = "images/moon.png"
+                    logo.src = "images/logo.png"
+                }
+            }
+    
+        </script>
+    </body>
+</html>
